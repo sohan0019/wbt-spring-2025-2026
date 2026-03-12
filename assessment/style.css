@@ -1,0 +1,48 @@
+body{
+  background: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  color: red;
+}
+
+span{
+  color: red;
+}
+
+.label{
+  text-align: right;
+  font-weight: 600;
+  
+}
+
+.light{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inp{
+  width: 200px;
+  margin-left: 20px;
+}
+
+.inp_lite{
+  width: 50px;
+}
+
+.select{
+  width: 207px;
+  margin-left: 20px;
+}
+
+.space{
+  margin-left: 20px;
+}
+
+.btn{
+  width: 80px;
+}

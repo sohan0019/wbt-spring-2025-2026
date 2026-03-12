@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/contactMeStyle.css">
+    <title>Contact Me</title>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./project.html">Project</a></li>
+        <li><a href="./education.html">Education</a></li>
+        <li><a href="./experience.html">Experience</a></li>
+      </ul>
+    </header>
+
+    <br><br>
+
+    <form method="post">
+      <fieldset>
+        <table>
+          <tr>
+            <td><label for="firstname">First Name:</label></td>
+            <td>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Enter first name"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="lastname">Last Name:</label></td>
+            <td>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Enter last name"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Gender:</label></td>
+            <td>
+              <input type="radio" name="gender" value="male" required /> Male
+              <input type="radio" name="gender" value="female" /> Female
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="company">Company:</label></td>
+            <td>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                placeholder="Enter company"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Reason of Contact:</label></td>
+            <td>
+              <input type="radio" name="reason" value="project" required />Project 
+              <input type="radio" name="reason" value="thesis" /> Thesis
+              <input type="radio" name="reason" value="job" /> Job
+            </td>
+          </tr>
+          <tr>
+            <td><label>Topics:</label></td>
+            <td>
+              <input type="checkbox" value="web" required /> Web Development
+              <input type="checkbox" value="mobile" /> Mobile Development
+              <input type="checkbox" value="ai_ml" /> AI/ML Development
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="date">Consultation Date:</label></td>
+            <td><input type="date" name="date" id="date" required /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Submit" />
+              <input type="reset" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+
+    <br><br>
+
+    <footer>
+      <h3 class="title">Social Media Links</h3>
+      <a href="https://github.com/sohan0019?tab=repositories" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" alt="">
+      </a>
+      <a href="https://www.linkedin.com/in/mohammad-sohanur-rahman-871659319/" target="_blank">
+        <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="">
+        </a
+      >
+    </footer>
+  </body>
+</html>
