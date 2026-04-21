@@ -1,3 +1,4 @@
+<?php require_once "contact_process.php"; ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,88 +20,98 @@
 
     <br><br>
 
-    <form method="post">
+    <form method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
       <fieldset>
         <table>
           <tr>
-            <td><label for="firstname">First Name:</label></td>
+            <td>First Name <span class="required">*</span></td>
             <td>
               <input
                 type="text"
                 id="firstname"
-                name="firstname"
+                name="firstName"
                 placeholder="Enter first name"
-                required
+                value="<?= $firstName ?>"
               />
+              <span class="error"><?= $firstNameErr ?></span>
             </td>
           </tr>
 
           <tr>
-            <td><label for="lastname">Last Name:</label></td>
+            <td>Last Name <span class="required">*</span></td>
             <td>
               <input
                 type="text"
                 id="lastname"
-                name="lastname"
+                name="lastNaame"
                 placeholder="Enter last name"
-                required
+                value="<?= $lastName ?>"
               />
+              <span class="error"><?= $lastNameErr ?></span>
             </td>
           </tr>
 
           <tr>
-            <td><label>Gender:</label></td>
+            <td>Gender <span class="required">*</span></td>
             <td>
-              <input type="radio" name="gender" value="male" required /> Male
-              <input type="radio" name="gender" value="female" /> Female
+              <input type="radio" name="gender" value="male" <?= ($gender == "male") ? "checked" : "" ?>/> Male
+              <input type="radio" name="gender" value="female" <?= ($gender == "female") ? "checked" : "" ?>/> Female
+              <span class="error"><?= $genderErr ?></span>
             </td>
           </tr>
 
           <tr>
-            <td><label for="email">Email:</label></td>
+            <td>Email <span class="required">*</span></td>
             <td>
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Enter email"
-                required
-              />
+                value="<?= $email ?>"
+              >
+              <span class="error"><?= $emailErr ?></span>
             </td>
           </tr>
 
           <tr>
-            <td><label for="company">Company:</label></td>
+            <td>Company</td>
             <td>
               <input
                 type="text"
                 name="company"
                 id="company"
                 placeholder="Enter company"
+                value="<?= $company ?>"
               />
             </td>
           </tr>
 
           <tr>
-            <td><label>Reason of Contact:</label></td>
+            <td>Reason of Contact <span class="required">*</span></td>
             <td>
-              <input type="radio" name="reason" value="project" required />Project 
-              <input type="radio" name="reason" value="thesis" /> Thesis
-              <input type="radio" name="reason" value="job" /> Job
+              <input type="radio" name="reason" value="project" <?= ($reason == "project") ? "checked" : "" ?> />Project 
+              <input type="radio" name="reason" value="thesis" <?= ($reason == "thesis") ? "checked" : "" ?> /> Thesis
+              <input type="radio" name="reason" value="job" <?= ($reason == "job") ? "checked" : "" ?> /> Job
+              <span class="error"><?= $reasonErr ?></span>
             </td>
           </tr>
           <tr>
-            <td><label>Topics:</label></td>
+            <td>Topics <span class="required">*</span></td>
             <td>
-              <input type="checkbox" value="web" required /> Web Development
-              <input type="checkbox" value="mobile" /> Mobile Development
-              <input type="checkbox" value="ai_ml" /> AI/ML Development
+              <input type="checkbox" name="chkbox[]" value="web" <?= ($chkbox == "web") ? "checked" : "" ?> /> Web Development
+              <input type="checkbox" name="chkbox[]" value="mobile" <?= ($chkbox == "mobile") ? "checked" : "" ?> /> Mobile Development
+              <input type="checkbox" name="chkbox[]" value="ai_ml" <?= ($chkbox == "ai_ml") ? "checked" : "" ?> /> AI/ML Development
+              <span class="error"><?= $chkboxErr ?></span>
             </td>
           </tr>
 
           <tr>
-            <td><label for="date">Consultation Date:</label></td>
-            <td><input type="date" name="date" id="date" required /></td>
+            <td>Date <span class="required">*</span></td>
+            <td>
+              <input type="date" name="date" id="date" value="<?= $date ?>" />
+              <span class="error"><?= $dateErr ?></span>
+            </td>
           </tr>
           <tr>
             <td></td>
